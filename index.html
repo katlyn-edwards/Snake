@@ -1,0 +1,96 @@
+<html>
+	<head>
+		<title>Snake!</title>
+		<script src="jquery-1.10.2.min.js"></script>
+		<script src="script.js"></script>
+		<style>
+			body {
+				background-color: #757575;
+			}
+
+			h1 {
+				text-align: center;
+			}
+
+			.example {
+				float: none;
+				margin-right: .3em;
+				margin-bottom: .3em;
+			}
+
+			#info {
+				float: left;
+				margin: 1em;
+				padding: 1em;
+			}
+
+			#info p {
+				font-size: larger;
+			}
+
+			#board {
+				width: 300px;          /* 40 == 600 */
+				height: 300px;         /* 20 == 300 */
+				margin-left: auto;     /* 10 == 150 */
+				margin-right: auto;
+			}
+
+			#start {
+				margin-top: 1em;
+			}
+
+			#main {
+				text-align: center;
+			}
+
+			.square {
+				width: 13px;
+				height: 13px;
+				background-color: #272822;
+				border: 1px solid #020000;
+				float: left;
+			}
+
+			.food {
+				background-color: blue;
+				border: 2px solid darkblue;
+				width: 11px;
+				height: 11px;
+			}
+
+			.snake {
+				width: 11px;
+				height: 11px;
+				background-color: red;
+				border: 2px solid darkred;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>Snake!</h1>
+		<div id="info">
+			<p>Current Score: <span id="score">0</span></p>
+			<div class="square food example"></div> Food<br/>
+			<div class="square snake example"></div> Snake<br/>
+			<br/>
+			<div>Grid Size:<br/>
+				<label><input name="grid" type="radio" value="10" id="smallGrid"/>Small</label><br/>
+				<label><input name="grid" type="radio" value="20" checked="checked" id="mediumGrid"/>Medium</label><br/>
+				<label><input name="grid" type="radio" value="40" id="largeGrid"/>Large</label><br/>
+			</div>
+			<br/>
+			<div>Speed:<br/>
+				<label><input name="speed" type="radio" value="1000" id="slowSpeed"/>Slow</label><br/>
+				<label><input name="speed" type="radio" value="500" checked="checked" id="mediumSpeed"/>Medium</label><br/>
+				<label><input name="speed" type="radio" value="250" id="fastSpeed"/>Fast</label><br/>
+			</div>
+			<p> Use arrow keys to move snake.</p>
+			<button id="start">Click to start (or press 'P')</button>
+		</div>
+		<div id="main">
+			<div id="board">
+			</div>
+		</div>
+	</body>
+</html>
